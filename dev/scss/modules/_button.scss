@@ -1,0 +1,162 @@
+.btn {
+    border: none;
+    min-height: 60px;
+    padding: 16px 30px;
+    text-transform: uppercase;
+    @include transition;
+    @include border-radius(4px);
+
+    i {
+        vertical-align: middle;
+    }
+
+    &--xl {
+        padding: 15px 40px;
+    }
+
+    &--lg {
+        padding: 10px 35px;
+    }
+
+    &--md {
+        padding: 7px 30px;
+    }
+
+    &--sm {
+        padding: 6px 25px;
+    }
+
+    &--xs {
+        padding: 6px 20px;
+        height: auto;
+        min-height: 10px;
+    }
+
+    &-brand {
+        background-color: $color-brand;
+        border-color: $color-brand;
+        color: $color-white;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-brand, 20%);
+            border-color: darken($color-brand, 20%);
+            color: $color-white;
+        }
+    }
+
+    &-brand-secondary {
+        background-color: $color-brand-secondary;
+        border-color: $color-brand-secondary;
+        color: $color-white;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-brand-secondary, 20%);
+            border-color: darken($color-brand-secondary, 20%);
+            color: $color-white;
+        }
+    }
+
+    &-default {
+        background-color: $color-white;
+        border-color: $color-10;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: $color-20;
+            border-color: $color-20;
+        }
+    }
+
+    &-primary {
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-primary, 10%);
+            border-color: darken($color-primary, 10%);
+        }
+    }
+
+    &-success {
+        background-color: $color-success;
+        border-color: $color-success;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-success, 10%);
+            border-color: darken($color-success, 10%);
+        }
+    }
+
+    &-info {
+        background-color: $color-info;
+        border-color: $color-info;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-info, 10%);
+            border-color: darken($color-info, 10%);
+        }
+    }
+
+    &-warning {
+        background-color: $color-warning;
+        border-color: $color-warning;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-warning, 10%);
+            border-color: darken($color-warning, 10%);
+        }
+    }
+
+    &-danger {
+        background-color: $color-danger;
+        border-color: $color-danger;
+
+        &:hover,
+        &:focus,
+        &:visited {
+            background-color: darken($color-danger, 10%);
+            border-color: darken($color-danger, 10%);
+        }
+    }
+
+    &-burger {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        color: $color-black;
+        @include font-size(2.2);
+    }
+
+    &-cart {
+        height: auto;
+        min-height: 10px;
+        @include font-size(1.2);
+        padding: 5px 8px;
+        color: $color-white !important;
+    }
+}
+
+a,
+button,
+.btn {
+    &:focus {
+        outline: none;
+    }
+}
