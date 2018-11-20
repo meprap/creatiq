@@ -4,7 +4,6 @@
         
 @import 'utilities/path',
         'utilities/functions',
-        'utilities/fonts',
         'utilities/global-vars',
         'utilities/mixins',
         'utilities/breakpoint',
@@ -39,6 +38,7 @@
         'modules/card',
         'modules/carousel',
         'modules/social',
+        'modules/vector',
         'modules/panel';
 
 @import 'layout/header',

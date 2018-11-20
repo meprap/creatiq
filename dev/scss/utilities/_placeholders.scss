@@ -33,7 +33,9 @@
 %heading {
     @include font($header-font, normal, 600);
     margin: 0 0 15px;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.004em;
+    line-height: 1.2;
+    color: $color-header-brand;
 }
 
 // Visually hide an element

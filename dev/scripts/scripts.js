@@ -22,7 +22,7 @@ $(document).ready(function () {
 function headerAdjustment() {
 	var headerHeight = $(".theme-header").outerHeight(),
 		finalHeight = headerHeight;
-	$(".theme-main").css("padding-top", "" + finalHeight + "px");
+	$(".above-the-fold").css("padding-top", "" + finalHeight + "px");
 }
 
 // Sticky Footer

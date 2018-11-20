@@ -7,13 +7,38 @@ h6 {
     @extend %heading;
 }
 
+h1 {
+    @include font-size(4.5);
+}
+
+h2 {
+    @include font-size(4);
+}
+
+h3 {
+    @include font-size(3.5);
+}
+
+h4 {
+    @include font-size(3);
+}
+
+h5 {
+    @include font-size(2.5);
+}
+
+h6 {
+    @include font-size(2);
+}
+
 b,
 strong {
-    @include font($base-font, normal, 500);
+    @include font($base-font, normal, 600);
 }
 
 a {
     @include transition(all, .5s, ease);
+
     &:hover {
         text-decoration: none;
     }
@@ -22,6 +47,7 @@ a {
 p {
     margin: 0 0 15px;
     line-height: 1.5;
+
     @include last-child() {
         margin-bottom: 0;
     }

@@ -55,7 +55,7 @@
     &--3-line {
         @include ellipsis(70px, 3);
     }
-}z
+}
 
 .rounded {
     @include border-radius(4px);
@@ -130,8 +130,25 @@
 }
 
 
-// Typo Color
-.text {
+// Gradient
+.gradient {
+    &-primary {
+        background-image: linear-gradient(90deg, #56C7FC 0%, #9C94FC 100%);
+    }
+
+    &-secondary {
+        background-image: linear-gradient(134deg, #60B2E5 0%, #32AFFC 100%);
+    }
+
+    &-shade {
+        background-image: linear-gradient(135deg, #56C7FC 0%, #9C94FC 100%);
+        background: rgba(24, 21, 25, 0.35);
+    }
+}
+
+
+// Color
+.color {
     &-black {
         color: $color-black;
     }
@@ -147,7 +164,11 @@
     &-brand-secondary {
         color: $color-brand-secondary;
     }
+}
 
+
+// Typo Color
+.text-size {
     &-11 {
         @include font-size(1.1);
     }

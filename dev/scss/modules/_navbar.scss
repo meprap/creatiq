@@ -1,4 +1,11 @@
 .navbar {
+    min-height: 20px;
+    height: auto;
+    float: none;
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1;
+
     &-nav {
         float: none;
         display: inline-block;
@@ -10,18 +17,24 @@
             margin: 0;
 
             >a {
-                padding: 22px 20px 18px;
-                text-transform: uppercase;
+                background-color: transparent;
+                padding: 20px;
+                // @include font($sub-header-font, normal, normal);
+                @include links($color-header-navbar, $color-header-navbar, $color-header-navbar-hover, $color-header-navbar);
+
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                }
             }
         }
     }
 
     &-brand {
         height: auto;
-        float: none;
+        padding: 20px 0;
+        line-height: 1;
         display: inline-block;
-        padding: 0;
-        text-transform: uppercase;
 
         >img {
             max-width: 50%;

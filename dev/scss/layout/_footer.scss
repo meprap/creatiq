@@ -1,9 +1,12 @@
 .#{$global} {
     &-footer {
+        &__info {
+            padding: 60px 0;
+        }
         &__copyright {
             background-color: $color-brand;
             padding: 10px 15px;
-            color: $color-white;
+            color: $color-footer-copyright;
             @include font-size(1.2);
         }
     }
