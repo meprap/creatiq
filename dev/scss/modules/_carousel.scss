@@ -1,10 +1,11 @@
 .#{$global} {
     &-carousel-testimonial {
         width: 100%;
+        min-height: 275px;
         position: relative;
 
-        &__carousel-inner {
-            width: 100%;
+        &__inner {
+            width: 635px;
 
             >.item {
                 width: 100%;
@@ -39,6 +40,7 @@
             z-index: 4;
             top: 50%;
             transform: translateY(-50%);
+            margin-top: -50px;
 
             .carousel-control {
                 background-image: none;

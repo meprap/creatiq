@@ -139,6 +139,31 @@ jQuery(document).ready(function ($) {
 });
 
 
+
+var Layout = (function () {
+	var handleImg = function () {
+		$(".availability__bg img").each(function () {
+			var $src = $(this).attr("src");
+			$(this)
+				.parent()
+				.css({
+					"background-image": "url(" + $src + ")",
+				});
+			$(this).remove();
+		});
+	};
+	return {
+		init: function () {
+			handleImg();
+		}
+	};
+})();
+
+$(document).ready(function () {
+	Layout.init();
+});
+
+
 // // Carousel
 // var Layout = (function () {
 // 	// handle carousel
