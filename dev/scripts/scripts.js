@@ -1,5 +1,13 @@
 $(document).ready(function () {
 
+	$('.panel-group--design-1 .panel').on('show.bs.collapse', function () {
+		$(this).addClass('active');
+	});
+	
+	$('.panel-group--design-1 .panel').on('hide.bs.collapse', function () {
+		$(this).removeClass('active');
+	});
+
 	$('a[data-slide]').click(function (e) {
 		e.preventDefault();
 		var slideno = $(this).data('slide');
@@ -131,65 +139,65 @@ jQuery(document).ready(function ($) {
 });
 
 
-// Carousel
-var Layout = (function () {
-	// handle carousel
-	var handleCarousel = function () {
-		var $item = $(".theme-carousel .carousel-inner .item, .graphical-links a, .card-package__img");
-		$item.eq(0).addClass("active");
-		$item.addClass("full-screen");
+// // Carousel
+// var Layout = (function () {
+// 	// handle carousel
+// 	var handleCarousel = function () {
+// 		var $item = $(".theme-carousel .carousel-inner .item, .graphical-links a, .card-package__img");
+// 		$item.eq(0).addClass("active");
+// 		$item.addClass("full-screen");
 
-		$(".theme-carousel img, .graphical-links a img, .card-package__img img").each(function () {
-			var $src = $(this).attr("src");
-			var $color = $(this).attr("data-color");
-			$(this)
-				.parent()
-				.css({
-					"background-image": "url(" + $src + ")",
-					"background-color": $color
-				});
-			$(this).remove();
-		});
-	};
+// 		$(".theme-carousel img, .graphical-links a img, .card-package__img img").each(function () {
+// 			var $src = $(this).attr("src");
+// 			var $color = $(this).attr("data-color");
+// 			$(this)
+// 				.parent()
+// 				.css({
+// 					"background-image": "url(" + $src + ")",
+// 					"background-color": $color
+// 				});
+// 			$(this).remove();
+// 		});
+// 	};
 
-	var handleCard = function () {
-		var $item = $(".card__img");
-		$item.addClass("full-screen");
-		$(".card__img img, .graphical-links a img, .card-package__img img").each(function () {
-			var $src = $(this).attr("src");
-			var $color = $(this).attr("data-color");
+// 	var handleCard = function () {
+// 		var $item = $(".card__img");
+// 		$item.addClass("full-screen");
+// 		$(".card__img img, .graphical-links a img, .card-package__img img").each(function () {
+// 			var $src = $(this).attr("src");
+// 			var $color = $(this).attr("data-color");
 
-			$(this)
-				.parent()
-				.css({
-					"background-image": "url(" + $src + ")",
-					"background-color": $color
-				});
-			$(this).remove();
-		});
-	};
+// 			$(this)
+// 				.parent()
+// 				.css({
+// 					"background-image": "url(" + $src + ")",
+// 					"background-color": $color
+// 				});
+// 			$(this).remove();
+// 		});
+// 	};
 
-	var carouselAdjustment = function () {
-		var height = $(window).height() - $(".theme-header").outerHeight(); //getting windows height
-		$('.theme-carousel__carousel-inner>.item').css('min-height', (height + 1) + 'px'); //and setting height of carousel
-	};
+// 	var carouselAdjustment = function () {
+// 		var height = $(window).height() - $(".theme-header").outerHeight(); //getting windows height
+// 		$('.theme-carousel__carousel-inner>.item').css('min-height', (height + 1) + 'px'); //and setting height of carousel
+// 	};
 
-	var attachResizeEvent = function () {
-		$(window).on("resize", function () {
-			carouselAdjustment();
-		});
-	};
+// 	var attachResizeEvent = function () {
+// 		$(window).on("resize", function () {
+// 			carouselAdjustment();
+// 		});
+// 	};
 
-	return {
-		init: function () {
-			handleCarousel(); // initial setup for carousel
-			handleCard(); // initial setup for card
-			carouselAdjustment();
-			attachResizeEvent();
-		}
-	};
-})();
+// 	return {
+// 		init: function () {
+// 			handleCarousel(); // initial setup for carousel
+// 			handleCard(); // initial setup for card
+// 			carouselAdjustment();
+// 			attachResizeEvent();
+// 		}
+// 	};
+// })();
 
-$(document).ready(function () {
-	Layout.init();
-});
+// $(document).ready(function () {
+// 	Layout.init();
+// });

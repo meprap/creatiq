@@ -41,5 +41,14 @@
 .content {
     &-wrap {
         padding: 75px 0;
+        .content-header {
+            margin-bottom: 70px;
+        }
+        .content-sub-header {
+            margin-bottom: 40px;
+        }
+        .content-paragraph {
+            margin-bottom: 20px;
+        }
     }
 }

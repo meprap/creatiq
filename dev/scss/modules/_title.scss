@@ -1,8 +1,18 @@
-.see-all-post {
-    float: right;
+.title {
     display: block;
-    @include breakpoint(xs) {
-        float: none;
-        margin-bottom: 30px;
+    margin-bottom: 80px;
+    &--home {
+        @include font($header-font, normal, 600);
+        @include font-size(1.6);
+        color: $color-brand;
+    }
+    &__bullet {
+        width: 36px;
+        height: 36px;
+        background-color: $color-brand-secondary;
+        display: block;
+    }
+    &__highlight {
+        color: $color-brand-secondary;
     }
 }

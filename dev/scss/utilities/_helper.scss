@@ -99,6 +99,7 @@
 
 // Coverting BS grid to Table
 .row--table {
+    width: 100%;
     @include vertical-center-tbl(100%);
 }
 
