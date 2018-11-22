@@ -1,5 +1,5 @@
 .pushy {
-    background-color: $color-black;
+    background-color: $color-brand;
     position: fixed;
     width: 250px;
     height: 100%;
@@ -37,15 +37,20 @@
     }
 
     .navbar-nav {
+        width: 100%;
         display: block;
-        padding: 15px 0;
+        padding: 0;
+        margin: 0;
 
         >li {
-            border-bottom: 1px solid red;
+            border-bottom: 1px solid white(.15);
+            display: block;
+            float: none;
 
             >a {
                 padding: 15px 25px;
-                @include font-size(1.7);
+                @include font-size(1.8);
+                @include links(white(.5), white(.5), $color-white, white(.5));
             }
         }
 

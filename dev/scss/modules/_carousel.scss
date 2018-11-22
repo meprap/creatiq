@@ -7,6 +7,10 @@
         &__inner {
             width: 635px;
 
+            @include breakpoint(xs) {
+                width: 100%;
+            }
+
             >.item {
                 width: 100%;
                 z-index: 1;
@@ -16,6 +20,9 @@
         &__caption {
             width: 635px;
             @include text-shadow(0 0 0);
+            @include breakpoint(xs) {
+                width: 100%;
+            }
         }
 
         &__quote {
@@ -61,10 +68,22 @@
 
             .left {
                 left: -150px;
+                @include breakpoint(sm) {
+                    left: -75px;
+                }
+                @include breakpoint(xs) {
+                    left: -50px;
+                }
             }
 
             .right {
                 right: 150px;
+                @include breakpoint(sm) {
+                    right: 0;
+                }
+                @include breakpoint(xs) {
+                    right: -50px;
+                }
             }
         }
     }

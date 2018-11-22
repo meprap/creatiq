@@ -3,7 +3,7 @@ $(document).ready(function () {
 	$('.panel-group--design-1 .panel').on('show.bs.collapse', function () {
 		$(this).addClass('active');
 	});
-	
+
 	$('.panel-group--design-1 .panel').on('hide.bs.collapse', function () {
 		$(this).removeClass('active');
 	});
@@ -139,8 +139,17 @@ jQuery(document).ready(function ($) {
 });
 
 
-
 var Layout = (function () {
+
+	// handle on page scroll
+var handleHeaderOnScroll = function () {
+	if ($(window).scrollTop() > 60) {
+		$("body").addClass("page-on-scroll");
+	} else {
+		$("body").removeClass("page-on-scroll");
+	}
+};
+	
 	var handleImg = function () {
 		$(".availability__bg img").each(function () {
 			var $src = $(this).attr("src");
@@ -155,6 +164,11 @@ var Layout = (function () {
 	return {
 		init: function () {
 			handleImg();
+			handleHeaderOnScroll();
+			// handle minimized header on page scroll
+            $(window).scroll(function() {
+                handleHeaderOnScroll();
+            });
 		}
 	};
 })();

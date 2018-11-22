@@ -4,24 +4,39 @@
 
     &--box {
         &-34 {
-            @include border-radius(2px);
+            width: 34px;
+            height: 34px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(30deg);
+            bottom: 230px;
+            left: 20px;
         }
 
         &-45 {
+            width: 45px;
+            height: 45px;
             @include border-radius(4px);
+            transform: skewY(7deg) rotate(30deg);
+            bottom: 230px;
+            right: -5px;
         }
 
         &-67 {
-            @include border-radius(2px);
+            width: 67px;
+            height: 67px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(30deg);
+            bottom: 300px;
+            left: -10px;
         }
 
         &-220 {
             width: 220px;
             height: 220px;
             @include border-radius(12px);
+            transform: skewY(7deg) rotate(45deg);
             bottom: -80px;
             right: -75px;
-            transform: skewY(7deg) rotate(45deg);
         }
 
         &-shadow {
@@ -30,6 +45,18 @@
 
         &-gradient {
             background-image: linear-gradient(35deg, #56C7FC 0%, #9C94FC 83%);
+        }
+
+        &-transparent {
+            &-5 {
+                background-color: white(.5);
+            }
+            &-10 {
+                background-color: white(.10);
+            }
+            &-15 {
+                background-color: white(.15);
+            }
         }
     }
 

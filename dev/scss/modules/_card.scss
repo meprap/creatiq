@@ -4,6 +4,9 @@
         svg {
             height: 75px;
         }
+        @include breakpoint(below-sm) {
+            margin-bottom: 20px;
+        }
     }
     &__title {
         @include font-size(2.2);
@@ -13,6 +16,4 @@
             margin-bottom: 10px;
         }
     }
-    &__desc {}
-    &--design-1 {}
 }

@@ -9,22 +9,37 @@ h6 {
 
 h1 {
     @include font-size(4.5);
+    @include breakpoint(below-sm) {
+        @include font-size(4);
+    }
 }
 
 h2 {
     @include font-size(4);
+    @include breakpoint(below-sm) {
+        @include font-size(3.5);
+    }
 }
 
 h3 {
     @include font-size(3.5);
+    @include breakpoint(below-sm) {
+        @include font-size(3);
+    }
 }
 
 h4 {
     @include font-size(3);
+    @include breakpoint(below-sm) {
+        @include font-size(2.5);
+    }
 }
 
 h5 {
     @include font-size(2.5);
+    @include breakpoint(below-sm) {
+        @include font-size(2);
+    }
 }
 
 h6 {
@@ -38,9 +53,12 @@ strong {
 
 a {
     @include transition(all, .5s, ease);
+    color: lighten($color-brand, 30%);
 
-    &:hover {
+    &:hover,
+    &:focus {
         text-decoration: none;
+        color: $color-brand;
     }
 }
 
