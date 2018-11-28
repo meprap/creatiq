@@ -1,19 +1,72 @@
 .card {
     margin-bottom: 60px;
+
     &__icon {
         svg {
-            height: 75px;
+            height: 112px;
         }
+
         @include breakpoint(below-sm) {
             margin-bottom: 20px;
         }
+
+        img {
+            height: 135px;
+        }
     }
+
     &__title {
         @include font-size(2.2);
     }
+
     &__features {
         >li {
             margin-bottom: 10px;
+        }
+    }
+
+    &--design-1 {
+        .card__icon {
+            svg {
+                height: 72px;
+            }
+    
+            @include breakpoint(below-sm) {
+                margin-bottom: 20px;
+            }
+    
+            img {
+                height: 135px;
+            }
+        }
+    }
+
+    &--design-2 {
+        padding: 0 30px;
+
+        @include breakpoint(below-sm) {
+            padding: 0;
+        }
+    }
+
+    &--design-3 {
+        min-height: 400px;
+        background-color: $color-white;
+        @include box-shadow(0 0 13px black(.2));
+        @include border-radius(10px);
+        padding: 50px 25px;
+        margin-bottom: 0;
+        transform: scale(1);
+        position: relative;
+        z-index: 1;
+
+        &.is-main {
+            transform: scale(1.1);
+            z-index: 2;
+
+            @include breakpoint(below-sm) {
+                transform: scale(1);
+            }
         }
     }
 }

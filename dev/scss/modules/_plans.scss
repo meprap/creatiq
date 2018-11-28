@@ -1,0 +1,41 @@
+.plans {
+    &__list {
+        font-size: 0;
+        margin-bottom: 100px;
+        margin-right: 15px;
+
+        >li {
+            width: 33.33333%;
+            // min-height: 350px;
+            @include font-size(1.6);
+            margin: 0;
+            padding: 0;
+            float: left;
+            @include breakpoint(below-sm) {
+                width: 100%;
+                float: none;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    &__icon {
+        margin-bottom: 25px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    &__offer {
+        color: $color-brand-secondary;
+        @include font-size(2);
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}

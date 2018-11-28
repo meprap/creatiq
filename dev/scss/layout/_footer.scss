@@ -1,7 +1,19 @@
 .#{$global} {
     &-footer {
+
+        &__bg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
         &__info {
             padding: 60px 0;
+            position: relative;
+            z-index: 2;
         }
 
         &__copyright {
@@ -56,6 +68,7 @@
             @include breakpoint(xs) {
                 margin-bottom: 30px;
             }
+
             &-icons {
                 >li {
                     >a {
@@ -97,9 +110,11 @@
         width: 290px;
         border: 1px solid #D8D8D8;
         margin-right: 10px;
+
         @include breakpoint(sm) {
             width: 225px;
         }
+
         @include breakpoint(xs) {
             width: 100%;
             margin-bottom: 10px;
@@ -109,6 +124,7 @@
     .btn {
         padding-left: 20px;
         padding-right: 20px;
+
         @include breakpoint(xs) {
             width: 100%;
         }

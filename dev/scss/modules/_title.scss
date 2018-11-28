@@ -11,6 +11,9 @@
         height: 36px;
         background-color: $color-brand-secondary;
         display: block;
+        &-content {
+            background-color: #7F65A4;
+        }
     }
     &__highlight {
         color: $color-brand-secondary;

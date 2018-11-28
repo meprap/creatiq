@@ -31,14 +31,34 @@
     }
 
     &-brand {
-        height: auto;
-        padding: 20px 0;
+        background-image: url('#{$theme-imgpath}/logo-creatiq-5d-white@2x.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: 0 20px;
+        width: 150px;
+        height: 75px;
+        padding: 0;
         line-height: 1;
-        display: inline-block;
+        display: block;
 
         >img {
             max-width: 50%;
             display: inline-block;
+        }
+    }
+}
+
+.content {
+    .navbar {
+        &-brand {
+            background-image: url('#{$theme-imgpath}/logo-creatiq-5d-black@2x.png');
+        }
+        &-nav {
+            >li {
+                >a {
+                    @include links($color-brand, $color-brand, $color-brand-secondary, $color-brand);
+                }
+            }
         }
     }
 }

@@ -1,8 +1,19 @@
 .social {
     &-icons {
         margin: 0;
+        padding: 60px 0;
         &>li {
-            margin: 0 10px 0 0;
+            margin: 0 25px;
+            >a {
+                display: block;
+                svg {
+                    height: 40px;
+                    g {
+                        // fill: red;
+                        // opacity: 1;
+                    }
+                }
+            }
         }
     }
 }

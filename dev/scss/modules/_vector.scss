@@ -30,6 +30,24 @@
             left: -10px;
         }
 
+        &-70 {
+            width: 70px;
+            height: 70px;
+            @include border-radius(12px);
+            transform: skewY(0deg) rotate(45deg);
+            bottom: 155px;
+            left: 30px;
+        }
+
+        &-160 {
+            width: 160px;
+            height: 160px;
+            @include border-radius(12px);
+            transform: skewY(7deg) rotate(45deg);
+            bottom: 70px;
+            left: -75px;
+        }
+
         &-220 {
             width: 220px;
             height: 220px;
@@ -51,29 +69,92 @@
             &-5 {
                 background-color: white(.5);
             }
+
             &-10 {
                 background-color: white(.10);
             }
+
             &-15 {
                 background-color: white(.15);
             }
         }
     }
 
+    &--box-grey {
+        background-color: rgba(76, 86, 114, .1);
+
+        &-67 {
+            width: 67px;
+            height: 67px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(15deg);
+            top: 50px;
+            left: -20px;
+        }
+
+        &-57 {
+            width: 57px;
+            height: 57px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(-30deg);
+            bottom: 105px;
+            right: -20px;
+        }
+
+        &-35 {
+            width: 35px;
+            height: 35px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(-30deg);
+            bottom: 95px;
+            right: 65px;
+        }
+
+        &-34 {
+            width: 34px;
+            height: 34px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(15deg);
+            top: 145px;
+            left: 20px;
+        }
+
+        &-24 {
+            width: 24px;
+            height: 24px;
+            @include border-radius(4px);
+            transform: skewY(7deg) rotate(15deg);
+            top: 115px;
+            left: 75px;
+        }
+    }
+
     &--line {
         width: 1px;
         height: 100%;
+
         &-1 {
             background-color: white(.3);
             left: 5%;
         }
+
         &-2 {
             background-color: white(.2);
             left: 20%;
         }
+
         &-3 {
             background-color: white(.1);
             left: 35%;
         }
+    }
+
+    &--line-dark {
+        width: 16.66666%;
+        height: 100%;
+        border-left: 1px solid lighten($color-brand, 55%);
+        position: relative;
+        float: left;
+        display: block;
     }
 }

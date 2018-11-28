@@ -5,3 +5,23 @@ button {
         outline: none;
     }
 }
+
+.form-control,
+textarea {
+    width: 100%;
+    border: none;
+    @include placeholder($color-30);
+    color: $color-brand;
+    @include font-size(1.6);
+    @include border-radius(0);
+    @include box-shadow(0 0 6px black(.15));
+}
+
+.form-control {
+    height: 48px;
+}
+
+textarea {
+    height: 180px;
+    padding: 15px;
+}

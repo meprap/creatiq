@@ -162,6 +162,10 @@
         background-image: linear-gradient(135deg, #56C7FC 0%, #9C94FC 100%);
         background: rgba(24, 21, 25, 0.35);
     }
+
+    &-shade-reverse {
+        background-image: linear-gradient(0deg, #60B2E5 10%, transparent 100%);
+    }
 }
 
 
@@ -236,30 +240,39 @@
     &-0 {
         z-index: 0;
     }
+
     &-1 {
         z-index: 1;
     }
+
     &-2 {
         z-index: 2;
     }
+
     &-3 {
         z-index: 3;
     }
+
     &-4 {
         z-index: 4;
     }
+
     &-5 {
         z-index: 5;
     }
+
     &-6 {
         z-index: 6;
     }
+
     &-7 {
         z-index: 7;
     }
+
     &-8 {
         z-index: 8;
     }
+
     &-9 {
         z-index: 9;
     }
