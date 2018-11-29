@@ -8,6 +8,9 @@
             top: 0;
             left: 0;
             z-index: 1;
+            @include breakpoint(xs) {
+                display: none;
+            }
         }
 
         &__info {
@@ -21,6 +24,8 @@
             padding: 30px 15px;
             color: $color-footer-copyright;
             @include font-size(1.4);
+            position: relative;
+            z-index: 3;
 
             p {
                 margin-bottom: 5px;
@@ -50,6 +55,12 @@
                     @include font-size(1.6);
                 }
             }
+        }
+
+        &__links,
+        &__connect {
+            position: relative;
+            z-index: 3;
         }
 
         &__links {

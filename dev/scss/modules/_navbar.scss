@@ -53,10 +53,30 @@
         &-brand {
             background-image: url('#{$theme-imgpath}/logo-creatiq-5d-black@2x.png');
         }
+
         &-nav {
             >li {
                 >a {
                     @include links($color-brand, $color-brand, $color-brand-secondary, $color-brand);
+
+                }
+
+                &.active {
+                    a {
+                        position: relative;
+                        color: $color-brand-secondary;
+
+                        &:after {
+                            content: '';
+                            background-color: $color-brand-secondary;
+                            width: 4px;
+                            height: 4px;
+                            position: absolute;
+                            bottom: -16px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                    }
                 }
             }
         }

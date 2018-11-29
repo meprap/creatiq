@@ -152,7 +152,7 @@ var handleHeaderOnScroll = function () {
 };
 	
 	var handleImg = function () {
-		$(".availability__bg img").each(function () {
+		$(".card-results__img img").each(function () {
 			var $src = $(this).attr("src");
 			$(this)
 				.parent()

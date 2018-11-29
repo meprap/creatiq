@@ -52,6 +52,13 @@
                 @include font-size(1.8);
                 @include links(white(.5), white(.5), $color-white, white(.5));
             }
+            &.active {
+                a {
+                    &:after {
+                        display: none;
+                    }
+                }
+            }
         }
 
         .dropdown-menu {
