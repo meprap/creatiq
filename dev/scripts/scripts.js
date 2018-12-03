@@ -32,6 +32,7 @@ function headerAdjustment() {
 		finalHeight = headerHeight;
 	$(".above-the-fold").css("padding-top", "" + finalHeight + "px");
 	$(".page-header").css("padding-top", "" + finalHeight + "px");
+	$(".theme-main-gutter").css("padding-top", "" + finalHeight + "px");
 }
 
 // Sticky Footer
@@ -143,16 +144,16 @@ jQuery(document).ready(function ($) {
 var Layout = (function () {
 
 	// handle on page scroll
-var handleHeaderOnScroll = function () {
-	if ($(window).scrollTop() > 60) {
-		$("body").addClass("page-on-scroll");
-	} else {
-		$("body").removeClass("page-on-scroll");
-	}
-};
-	
+	var handleHeaderOnScroll = function () {
+		if ($(window).scrollTop() > 60) {
+			$("body").addClass("page-on-scroll");
+		} else {
+			$("body").removeClass("page-on-scroll");
+		}
+	};
+
 	var handleImg = function () {
-		$(".card-results__img img").each(function () {
+		$(".availability__bg img, .card-results__img img").each(function () {
 			var $src = $(this).attr("src");
 			$(this)
 				.parent()
@@ -167,9 +168,9 @@ var handleHeaderOnScroll = function () {
 			handleImg();
 			handleHeaderOnScroll();
 			// handle minimized header on page scroll
-            $(window).scroll(function() {
-                handleHeaderOnScroll();
-            });
+			$(window).scroll(function () {
+				handleHeaderOnScroll();
+			});
 		}
 	};
 })();

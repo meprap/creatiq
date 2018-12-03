@@ -37,6 +37,11 @@
             transform: skewY(0deg) rotate(45deg);
             bottom: 155px;
             left: 30px;
+            @include breakpoint(xs) {
+                transform: skewY(7deg) rotate(45deg) scale(.65);
+                bottom: 150px;
+                left: 20px;
+            }
         }
 
         &-160 {
@@ -46,6 +51,10 @@
             transform: skewY(7deg) rotate(45deg);
             bottom: 70px;
             left: -75px;
+            @include breakpoint(xs) {
+                transform: skewY(7deg) rotate(45deg) scale(.65);
+                bottom: 75px;
+            }
         }
 
         &-220 {

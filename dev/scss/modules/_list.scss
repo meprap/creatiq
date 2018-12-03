@@ -13,3 +13,25 @@ ol {
         }
     }
 }
+
+.list {
+    &--brand {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        &>li {
+            position: relative;
+            padding-left: 30px;
+            &::before {
+                content: '';
+                position: absolute;
+                background-color: $color-brand-secondary;
+                width: 6px;
+                height: 6px;
+                top: 7px;
+                left: 0;
+                @include border-radius(100%);
+            }
+        }
+    }
+}

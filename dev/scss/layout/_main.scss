@@ -133,11 +133,31 @@
             z-index: -1;
         }
     }
+    &-img {
+        margin: 15px;
+        display: block;
+        &__left {
+            float: left;
+            margin-left: 0;
+        }
+        &__right {
+            float: right;
+            margin-right: 0;
+        }
+        &__left,
+        &__right {
+            @include breakpoint(below-sm) {
+                float: none;
+                margin: 0 0 30px;
+            }
+        }
+    }
 }
 
 .availability {
     padding: 100px 0;
     position: relative;
+    overflow: hidden;
 
     &__bg {
         width: 100%;
@@ -268,5 +288,20 @@
     }
     &__author {
         font-weight: 700;
+    }
+}
+
+.hugo-fetch {
+    background-color: #896CB1;
+    color: $color-white;
+    h2 {
+        color: $color-white;
+    }
+    p {
+        @include font-size(1.8);
+    }
+    .btn-default {
+        border-color: $color-white;
+        color: $color-white;
     }
 }

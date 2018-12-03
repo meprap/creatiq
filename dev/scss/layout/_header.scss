@@ -83,6 +83,10 @@
         @include font-size(5);
         margin: 0;
         padding: 120px 0;
+        @include breakpoint(xs) {
+            @include font-size(3.5);
+            padding: 75px 0;
+        }
     }
 }
 
@@ -104,6 +108,9 @@
         bottom: -10px;
         svg {
             height: 263px;
+            @include breakpoint(xs) {
+                height: 135px;
+            }
         }
     }
     &--results {
@@ -111,6 +118,9 @@
         right: -10px;
         svg {
             height: 270px;
+            @include breakpoint(xs) {
+                height: 135px;
+            }
         }
     }
     &--contact {
@@ -118,6 +128,19 @@
         right: -15px;
         svg {
             height: 230px;
+            @include breakpoint(xs) {
+                height: 135px;
+            }
+        }
+    }
+    &--vision {
+        bottom: -10px;
+        right: -15px;
+        svg {
+            height: 230px;
+            @include breakpoint(xs) {
+                height: 135px;
+            }
         }
     }
 }
