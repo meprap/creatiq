@@ -3,6 +3,7 @@
     position: absolute;
 
     &--box {
+
         &-34 {
             width: 34px;
             height: 34px;
@@ -37,6 +38,7 @@
             transform: skewY(0deg) rotate(45deg);
             bottom: 155px;
             left: 30px;
+
             @include breakpoint(xs) {
                 transform: skewY(7deg) rotate(45deg) scale(.65);
                 bottom: 150px;
@@ -51,6 +53,7 @@
             transform: skewY(7deg) rotate(45deg);
             bottom: 70px;
             left: -75px;
+
             @include breakpoint(xs) {
                 transform: skewY(7deg) rotate(45deg) scale(.65);
                 bottom: 75px;
@@ -95,46 +98,36 @@
         &-67 {
             width: 67px;
             height: 67px;
-            @include border-radius(4px);
-            transform: skewY(7deg) rotate(15deg);
             top: 50px;
-            left: -20px;
+            left: -30px;
         }
 
         &-57 {
             width: 57px;
             height: 57px;
-            @include border-radius(4px);
-            transform: skewY(7deg) rotate(-30deg);
             bottom: 105px;
-            right: -20px;
+            right: -5px;
         }
 
         &-35 {
             width: 35px;
             height: 35px;
-            @include border-radius(4px);
-            transform: skewY(7deg) rotate(-30deg);
-            bottom: 95px;
+            bottom: 105px;
             right: 65px;
         }
 
         &-34 {
             width: 34px;
             height: 34px;
-            @include border-radius(4px);
-            transform: skewY(7deg) rotate(15deg);
             top: 145px;
-            left: 20px;
+            left: 10px;
         }
 
         &-24 {
             width: 24px;
             height: 24px;
-            @include border-radius(4px);
-            transform: skewY(7deg) rotate(15deg);
             top: 115px;
-            left: 75px;
+            left: 80px;
         }
     }
 
