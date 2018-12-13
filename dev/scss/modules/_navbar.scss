@@ -26,6 +26,11 @@
                 &:focus {
                     background-color: transparent;
                 }
+
+                @include breakpoint(sm) {
+                    padding: 20px 12px;
+                    @include font-size(1.7);
+                }
             }
         }
     }
@@ -46,6 +51,11 @@
             display: inline-block;
         }
     }
+
+    &-collapse {
+        border: none;
+        @include box-shadow(0 0 0);
+    }
 }
 
 .content {
@@ -57,7 +67,7 @@
         &-nav {
             >li {
                 >a {
-                    @include links($color-brand, $color-brand, $color-brand-secondary, $color-brand);
+                    @include links(lighten($color-brand, 30%), lighten($color-brand, 30%), $color-brand-secondary, lighten($color-brand, 30%));
 
                 }
 
@@ -66,16 +76,16 @@
                         position: relative;
                         color: $color-brand-secondary;
 
-                        &:after {
-                            content: '';
-                            background-color: $color-brand-secondary;
-                            width: 4px;
-                            height: 4px;
-                            position: absolute;
-                            bottom: -16px;
-                            left: 50%;
-                            transform: translateX(-50%);
-                        }
+                        // &:after {
+                        //     content: '';
+                        //     background-color: $color-brand-secondary;
+                        //     width: 4px;
+                        //     height: 4px;
+                        //     position: absolute;
+                        //     bottom: -16px;
+                        //     left: 50%;
+                        //     transform: translateX(-50%);
+                        // }
                     }
                 }
             }

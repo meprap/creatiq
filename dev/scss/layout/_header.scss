@@ -9,6 +9,42 @@
         will-change: transform;
         transition: transform .5s;
 
+        &--is-open {
+            background-color: $color-white;
+
+            .navbar-brand {
+                background-image: url('#{$theme-imgpath}/logo-creatiq-5d-black@2x.png');
+            }
+
+            .navbar-nav {
+                >li {
+                    >a {
+                        @include font($sub-header-font, normal, 400);
+                        @include font-size(2);
+                        @include links(lighten($color-brand, 30%), lighten($color-brand, 30%), $color-brand-secondary, lighten($color-brand, 30%));
+                        // @include links($color-white, $color-white, $color-brand-secondary, $color-white);
+                        position: relative;
+                    }
+                    &.active {
+                        a {
+                            color: $color-brand-secondary;
+                            &:before {
+                                content: '';
+                                background-color: $color-brand-secondary;
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 8px;
+                                height: 8px;
+                                transform: translateY(-50%);
+                                margin-top: -1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         &.is-hidden {
             transform: translateY(-100%);
         }
@@ -70,7 +106,7 @@
         left: 0;
         opacity: .15;
     }
-    
+
     &__wrap {
         width: 100%;
         height: 100%;
@@ -83,6 +119,7 @@
         @include font-size(5);
         margin: 0;
         padding: 120px 0;
+
         @include breakpoint(xs) {
             @include font-size(3.5);
             padding: 75px 0;
@@ -96,6 +133,13 @@
             background-color: $color-white !important;
             background-image: none !important;
             @include box-shadow(0 2px 10px 0px black(.10));
+            .hamburger-inner {
+                background-color: $color-black;
+                &:before,
+                &:after {
+                    background-color: $color-black;
+                }
+            }
         }
     }
 }
@@ -104,40 +148,52 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
     &--rocket {
         bottom: -10px;
+
         svg {
             height: 263px;
+
             @include breakpoint(xs) {
                 height: 135px;
             }
         }
     }
+
     &--results {
         bottom: -15px;
         right: -10px;
+
         svg {
             height: 270px;
+
             @include breakpoint(xs) {
                 height: 135px;
             }
         }
     }
+
     &--contact {
         bottom: 0px;
         right: -15px;
+
         svg {
             height: 230px;
+
             @include breakpoint(xs) {
                 height: 135px;
             }
         }
     }
+
     &--vision {
         bottom: -10px;
         right: -15px;
+
         svg {
             height: 230px;
+
             @include breakpoint(xs) {
                 height: 135px;
             }
