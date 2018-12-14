@@ -47,6 +47,7 @@ function headerAdjustment() {
 		finalHeight = headerHeight;
 	$(".above-the-fold").css("padding-top", "" + finalHeight + "px");
 	$(".page-header").css("padding-top", "" + finalHeight + "px");
+	$(".content-banner").css("padding-top", "" + finalHeight + "px");
 	$(".theme-main-gutter").css("padding-top", "" + finalHeight + "px");
 }
 
@@ -168,7 +169,7 @@ var Layout = (function () {
 	};
 
 	var handleImg = function () {
-		$(".availability__bg img, .card-results__img img").each(function () {
+		$(".availability__bg img, .card-results__img img, .card-thoughts__img img, .content-banner__img img").each(function () {
 			var $src = $(this).attr("src");
 			$(this)
 				.parent()

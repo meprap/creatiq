@@ -6,6 +6,7 @@
     vertical-align: middle;
     @include font-size(1.4);
     margin-right: 5px;
+
     &--coming-soon {
         background-image: linear-gradient(90deg, #56C7FC 0%, #9C94FC 100%);
         @include box-shadow(0 0px 8px 0 black(.15));
@@ -13,13 +14,25 @@
         @include font($sub-header-font, normal, 300);
         margin: 0;
     }
+
     &-primary {
         background-color: #7F65A4;
     }
+
     &-info {
         background-color: $color-brand-secondary;
     }
+
     &-success {
         background-color: #60D394;
+    }
+
+    &-secondary {
+        background-color: $color-brand-secondary;
+        font-weight: 500;
+        &--extra-gutter {
+            padding-left: 45px;
+            padding-right: 45px;
+        }
     }
 }
