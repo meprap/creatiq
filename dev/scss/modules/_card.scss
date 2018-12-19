@@ -54,15 +54,21 @@
         background-color: $color-white;
         @include box-shadow(0 0 13px black(.2));
         @include border-radius(10px);
-        padding: 50px 25px;
+        padding: 35px 25px;
         margin-bottom: 0;
         transform: scale(1);
         position: relative;
         z-index: 1;
+        @include transition();
+
+        &:hover {
+            transform: scale(1.1);
+            position: relative;
+            z-index: 2;
+        }
 
         &.is-main {
-            transform: scale(1.1);
-            z-index: 2;
+            z-index: 3;
 
             @include breakpoint(below-sm) {
                 transform: scale(1);

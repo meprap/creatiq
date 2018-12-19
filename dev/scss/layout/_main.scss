@@ -324,7 +324,7 @@
     }
 
     &__author {
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .m-b-30 {
@@ -349,6 +349,12 @@
     .btn-default {
         border-color: $color-white;
         color: $color-white;
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: transparent;
+            border: 1px solid transparent;
+        }
     }
 }
 

@@ -10,13 +10,42 @@
             @include font-size(1.6);
             margin: 0;
             padding: 0;
-            float: left;
+            // float: left;
+            display: inline-block;
+            vertical-align: middle;
             @include breakpoint(below-sm) {
                 width: 100%;
                 float: none;
                 margin-bottom: 50px;
             }
         }
+    }
+
+    &__features {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        >li {
+            text-align: left;
+            margin-left: 15px;
+            margin-bottom: 10px;
+            position: relative;
+            &:before {
+                content: '';
+                background-color: $color-brand;
+                width: 4px;
+                height: 4px;
+                position: absolute;
+                top: 7px;
+                left: -20px;
+                @include border-radius(100px);
+            }
+        }
+    }
+
+    &__link {
+        @include font-size(1.8);
+        @include font($sub-header-font, normal, 500);
     }
 
     &__icon {

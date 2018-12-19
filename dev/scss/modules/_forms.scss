@@ -25,3 +25,14 @@ textarea {
     height: 180px;
     padding: 15px;
 }
+
+.wpcf7-not-valid-tip {
+    @include font-size(1.4);
+    font-weight: 300;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.wpcf7-response-output {
+    @include font-size(1.4);
+}

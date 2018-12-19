@@ -70,18 +70,21 @@
             @include transition(all, .5s, ease);
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
+            background-color: transparent;
+            color: $color-white;
             &:after {
                 opacity: 1;
             }
         }
 
-        &:hover,
-        &:focus {
-            background-color: transparent;
-            border: none;
-            color: $color-white;
-        }
+        // &:hover,
+        // &:focus {
+        //     background-color: transparent;
+        //     border: none;
+        //     color: $color-white;
+        // }
     }
 
     &-default {
@@ -105,18 +108,20 @@
             @include transition(all, .5s, ease);
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
+            border: 1px solid transparent;
             &:after {
                 opacity: 1;
             }
         }
 
-        &:hover,
-        &:focus {
-            background-color: transparent;
-            border: 1px solid transparent;
-            color: $color-white;
-        }
+        // &:hover,
+        // &:focus {
+        //     background-color: transparent;
+        //     border: 1px solid transparent;
+        //     color: $color-white;
+        // }
 
         span {
             position: relative;
@@ -154,6 +159,7 @@
         &:focus {
             background-color: transparent;
             color: $color-white;
+            border: 1px solid $color-white;
         }
 
         span {

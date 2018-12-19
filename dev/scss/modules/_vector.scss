@@ -20,6 +20,13 @@
             transform: skewY(7deg) rotate(30deg);
             bottom: 230px;
             right: -5px;
+
+            @include breakpoint(xs) {
+                width: 35px;
+                height: 35px;
+                bottom: 128px;
+                right: -14px;
+            }
         }
 
         &-67 {
@@ -67,6 +74,13 @@
             transform: skewY(7deg) rotate(45deg);
             bottom: -80px;
             right: -75px;
+
+            @include breakpoint(xs) {
+                width: 135px;
+                height: 135px;
+                bottom: -60px;
+                right: -40px;
+            }
         }
 
         &-shadow {
