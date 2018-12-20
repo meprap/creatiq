@@ -161,6 +161,19 @@
         }
     }
 
+    &--arsenal {
+        bottom: 0;
+        right: -20px;
+
+        svg {
+            height: 263px;
+
+            @include breakpoint(xs) {
+                height: 135px;
+            }
+        }
+    }
+
     &--results {
         bottom: -15px;
         right: -10px;

@@ -5,7 +5,8 @@
         margin-right: 15px;
 
         >li {
-            width: 33.33333%;
+            width: 33%;
+            // width: 33.33333%;
             // min-height: 350px;
             @include font-size(1.6);
             margin: 0;
