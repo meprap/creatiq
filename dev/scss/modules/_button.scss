@@ -109,10 +109,18 @@
         }
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             border: 1px solid transparent;
+            color: $color-white;
             &:after {
                 opacity: 1;
+            }
+        }
+
+        &:active {
+            &:focus {
+                color: $color-white;
             }
         }
 
@@ -130,7 +138,8 @@
     }
 
     &-default-white {
-        border: 1px solid $color-white;
+        // border: 1px solid $color-white;
+        border: 1px solid transparent;
         background-color: transparent;
         position: relative;
         color: $color-white;
@@ -159,7 +168,8 @@
         &:focus {
             background-color: transparent;
             color: $color-white;
-            border: 1px solid $color-white;
+            // border: 1px solid $color-white;
+            border: 1px solid transparent;
         }
 
         span {
